@@ -1,0 +1,13 @@
+version: "3"
+services:
+    nuxt:
+      container_name: nuxt
+      build: ./docker/frontEnd
+      volumes:
+        - ./appFront:/src
+      ports:
+        - 5000:3000
+      working_dir: /src
+      command: yarn run dev
+      tty: true   
+    
